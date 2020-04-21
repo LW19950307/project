@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //给数字加上千分号
+        //方法1
+        function formatNumberRgx(num) {
+            var parts = num.toString().split(".");
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            console.log(parts.join("."))
+            return parts.join(".")
+        }
+
+        formatNumberRgx(123456789)
+
+        //方法2
+        let num=123456789;
+        console.log(num.toLocaleString());
+
+
+
+
+    </script>
+</body>
+
+</html>
